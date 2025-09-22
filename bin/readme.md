@@ -34,3 +34,30 @@
 
 ---
 
+## 📁 Project Structure
+
+```bash
+src/test/java/
+│
+├── 📂 api
+│   ├── 📂 clients          # API Client classes (e.g., UserClient, ProductClient)
+│   └── 📂 payloads         # Request and Response POJOs (Plain Old Java Objects)
+│
+├── 📂 core
+│   ├── 📂 config           # Framework configuration (e.g., BaseTest, RequestSpecs)
+│   ├── 📂 listeners        # TestNG listeners for reporting
+│   ├── 📂 utils            # Reusable utilities (e.g., Data Generator, File Reader)
+│   └── 📂 constants        # Global constants
+│
+├── 📂 tests                # All TestNG test classes
+│   └── UserAPITests.java
+│   └── ProductAPITests.java
+│
+└── 📂 resources
+    ├── 📂 testdata         # Test data files (JSON, XML, CSV)
+    ├── config.properties   # Environment configuration
+    ├── log4j2.xml          # Logging configuration
+    └── suite.xml           # TestNG suite XML file
+
+target/
+└── allure-results          # Allure results (generated after test execution)
